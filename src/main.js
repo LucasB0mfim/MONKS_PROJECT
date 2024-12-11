@@ -1,5 +1,5 @@
-import { cities } from './api/cities.cards.js';
-import { products } from './api/products.list.js';
+import { cities } from './cities.cards.js';
+import { products } from './products.list.js';
 
 const cardsContainer = document.getElementById('cards-container');
 const productsContainer = document.querySelector('.product__container'); // Corrigido para querySelector
