@@ -34,3 +34,47 @@ plans.forEach(plan => {
     `;
     plansContainer.appendChild(planDiv);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const securityForm = document.querySelector('.validate__security-form');
+    const mathInputs = document.querySelectorAll('.validate__math-input');
+    const mathResultInput = document.querySelector('.validate__math-result');
+    const validateButton = document.querySelector('.validate__button-send');
+
+    let firstNumber;
+    let secondNumber;
+
+    function generateRandomNumbers() {
+        firstNumber = Math.floor(Math.random() * 1000);
+        secondNumber = Math.floor(Math.random() * 1000);
+        
+        mathInputs[0].value = firstNumber;
+        mathInputs[1].value = secondNumber;
+
+        mathResultInput.value = '';
+    }
+
+    generateRandomNumbers();
+
+    function validate(event) {
+        event.preventDefault();
+
+        const userResult = Number(mathResultInput.value);
+        const correctResult = firstNumber + secondNumber;
+
+        if (userResult === correctResult) {
+            alert('Parabéns! Resultado correto.');
+            generateRandomNumbers();
+        } else {
+            alert('Ops! Resultado incorreto. Tente novamente.');
+        }
+    }
+
+    // Adicione um preventDefault no submit do formulário
+    securityForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+    });
+
+    // Use click no botão
+    validateButton.addEventListener('click', validate);
+});
