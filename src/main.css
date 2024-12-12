@@ -133,7 +133,7 @@ section, footer {
     font-size: 2.083vw;
 
     @media (max-width: 768px) {
-        font-size: 3vh;
+        font-size: 2.5vh;
     }
 }
 
@@ -144,7 +144,7 @@ section, footer {
     margin-bottom: 1.771vw;
 
     @media (max-width: 768px) {
-        font-size: 2.2vh;
+        font-size: 2vh;
         margin-top: 0.5vh;
         margin-bottom: 1.8vh;
     }
@@ -411,18 +411,24 @@ section, footer {
     margin-bottom: 2.083vw;
 
     @media (max-width: 768px) {
-        font-size: 3vh;
+        font-size: 2.5vh;
+        margin-bottom: 2.083vh;
     }
 }
 
 .product__container {
     display: flex;
     justify-content: space-evenly;
-    gap: 0.833vw;
+    gap: 1vw;
     flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+        gap: 1vh;
+    }
 }
 
 .product__card {
+    color: #7D26C9;
     font-weight: 600;
     font-size: 1.042vw;
     padding: 0.833vw 2.604vw;
@@ -431,6 +437,13 @@ section, footer {
     border-radius: 1.667vw;
     background-color: #DFDCD5;
     transition: transform 0.3s ease;
+
+    @media (max-width: 768px) {
+        font-size: 2vh;
+        padding: 0.833vh 2.604vh;
+        cursor: pointer;
+        border-radius: 1.667vh;
+    }
 }
 
 .product__card:hover {
@@ -482,7 +495,7 @@ section, footer {
     margin-bottom: 0.417vw;
 
     @media (max-width: 768px) {
-        font-size: 3vh;
+        font-size: 2.5vh;
         margin-bottom: 0vh;
     }
 }
@@ -508,8 +521,8 @@ section, footer {
 
     @media (max-width: 768px) {
         width: 50%;
-        padding: 1vh 0vh;
-        font-size: 1.5vh;
+        padding: 1.5vh 0vh;
+        font-size: 2vh;
         border-radius: 1vw;
     }
 }
