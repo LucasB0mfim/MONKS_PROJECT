@@ -88,7 +88,7 @@ body {
     width: 24vw;
 }
 
-section {
+section, footer {
     padding: 0vw 4vw;
 }
 
@@ -150,9 +150,11 @@ section {
 
 .photos {
     width: 100%;
+    height: 50vw;
     display: flex;
     justify-content: space-between;
     padding-top: 3.333vw;
+    padding-bottom: 3.333vw;
 }
 
 .photos__main {
@@ -186,8 +188,15 @@ section {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
+.photos__photo-main {
+    height: 83%;
+}
+
 .photos__aside {
     width: 46.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .photos__aside .photos__photo {
@@ -235,6 +244,12 @@ section {
 .download__app {
     cursor: pointer;
     height: 2.5vw;
+    transition: transform 0.3s ease;
+}
+
+.download__app:hover {
+    transform: scale(1.08);
+    transition: transform 0.3s ease;
 }
 
 .download__app:first-child {
@@ -267,4 +282,199 @@ section {
     border: 1px solid #7D26C9;
     border-radius: 1.667vw;
     background-color: #DFDCD5;
+    transition: transform 0.3s ease;
+}
+
+.product__card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.plan__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.667vw;
+    padding-bottom: 3.333vw;
+}
+
+.plan__card {
+    width: 23vw;
+    padding: 1.25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1.5px solid #DFBBFE;
+    border-radius: 0.833vw;
+    background-color: #FFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.plan__card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.plan__card-title {
+    font-size: 1.2vw;
+    align-self: flex-start;
+    margin-bottom: 0.417vw;
+}
+
+.plan__card-phase {
+    font-size: 1.1vw;
+    margin-bottom: 1.25vw;
+}
+
+.plan__card-button {
+    cursor: pointer;
+    padding: 0.7vw 2vw;
+    font-size: 0.84vw;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.208vw;
+    background-color: #DFBBFE;
+}
+
+footer {
+    background-color: #2D2D2D;
+}
+
+.validate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top:  3.333vw;
+    padding-bottom: 3.333vw;
+}
+
+.validate__illustration {
+    width: 20vw;
+    height: 18vw;
+}
+
+.validate__content {
+    width: 60%;
+    padding: 1.25vw;
+    border-radius: 1.25vw;
+    background-color: #EAE8E4;
+}
+
+.validate__title {
+    font-size: 2.083vw;
+    color: #2D2D2D;
+}
+
+.validate__text:first-child {
+    margin-top: 0.417vw;
+}
+
+.validate__text:last-child {
+    margin-top: 1.25vw;
+    margin-bottom: 1.667vw;
+}
+
+.validate__text {
+    color: #2D2D2D;
+    font-size: 1.042vw;
+}
+
+.validate__input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.833vw;
+    flex-wrap: wrap;
+    margin-bottom: 1.667vw;
+}
+
+.validate__input {
+    width: 25vw;
+    padding: 0.833vw;
+    outline: none;
+    border: none;
+    border-radius: 0.417vw;
+    background-color: #FFF;
+    font-size: 1vw;
+}
+
+.validate__input:placeholder {
+    font-size: 1vw;
+}
+
+.validate__security-check {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.validate__security-text {
+    width: 30%;
+    color: #2D2D2D;
+    font-size: 1.25vw;
+    font-weight: 600;
+}
+
+.validate__math-operation {
+    width: 30%;
+    padding: 0.833vw 2.604vw;
+    border-radius: 0.417vw;
+    background-color: #DFDCD5;
+}
+
+.validate__math-input {
+    width: 40%;
+    color: #7D26C9;
+    font-weight: 600;
+    font-size: 1.042vw;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    text-align: center;
+}
+
+.validate__math-input::placeholder {
+    color: #7D26C9;
+    font-size: 1.042vw;
+    font-weight: 600;
+}
+
+.validate__math-operator,
+.validate__math-equals {
+    font-weight: 600;
+}
+
+.validate__math-result {
+    width: 24%;
+    padding: 0.833vw;
+    outline: none;
+    border: none;
+    border-radius: 0.417vw;
+    background-color: #FFF;
+    font-size: 1vw;
+}
+
+.validate__math-result:placeholder {
+    font-size: 1vw;
+}
+
+.validate__button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.667vw;
+}
+
+.validate__button-send {
+    width: 15.5vw;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.84vw;
+    padding: 0.833vw 2.604vw;
+    border: none;
+    border-radius: 0.208vw;
+    background-color: #DFBBFE;
 }

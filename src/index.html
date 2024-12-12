@@ -41,8 +41,11 @@
 
     <section class="photos">
         <main class="photos__main">
-            <h2 class="photos__title">Lorem ipsum dolor sit amet consectetur</h2>
-            <p class="photos__description">Lorem ipsum dolor sit amet consectetur. Semper orci adipiscing faucibus sit scelerisque quis commodo</p>
+            <div>
+                <h2 class="photos__title">Lorem ipsum dolor sit amet consectetur</h2>
+                <p class="photos__description">Lorem ipsum dolor sit amet consectetur. Semper orci adipiscing faucibus sit scelerisque quis commodo</p>
+            
+            </div>
             <img class="photos__photo photos__photo-main" src="./assets/images/city_5.png" alt="Front photo of a city">
         </main>
         <aside class="photos__aside">
@@ -70,6 +73,47 @@
             <!-- Injetado dinâmicamente -->
         </div>
     </section>
+
+    <section class="plan">
+        <div class="plan__container">
+            <!-- Injetado dinâmicamente -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="validate">
+            <img class="validate__illustration" src="./assets/images/ilustration.png" alt="Ilustration">
+            <div class="validate__content">
+                <h1 class="validate__title">Lorem ipsum dolor sit amet consectetur</h1>
+                <div class="validate__description">
+                    <p class="validate__text">Lorem ipsum dolor sit amet consectetur. Semper orci adipiscing faucibus sit scelerisque</p>
+                    <p class="validate__text">Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+                
+                <div class="validate__input-group">
+                    <input class="validate__input validate__input--required" type="text" placeholder="Categoria*" />
+                    <input class="validate__input validate__input--required" type="text" placeholder="Categoria*" />
+                    <input class="validate__input" type="text" placeholder="Categoria" />
+                    <input class="validate__input" type="text" placeholder="Categoria" />
+                </div>
+                
+                <div class="validate__security-check">
+                    <p class="validate__security-text">Verificação de segurança</p>
+                    <div class="validate__math-operation">
+                        <input class="validate__math-input" type="text" placeholder="0">
+                        <span class="validate__math-operator">+</span>
+                        <input class="validate__math-input" type="text" placeholder="0">
+                    </div>
+                    <span class="validate__math-equals">=</span>
+                    <input class="validate__math-result" type="text" placeholder="Result">
+                </div>
+
+                <div class="validate__button">
+                    <button class="validate__button-send">Lorem ipsum</button>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script type="module" src="./main.js"></script>
 </body>
