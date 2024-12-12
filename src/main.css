@@ -95,13 +95,13 @@ body {
 
 .header__end {
     width: 50%;
-    padding-right: 4.167vw;
+    padding-right: 2.4vw;
     display: flex;
     justify-content: end;
 }
 
 .header__end img {
-    width: 24vw;
+    width: 75%;
 }
 
 section, footer {
