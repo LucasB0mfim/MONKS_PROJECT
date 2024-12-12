@@ -173,7 +173,7 @@ section, footer {
     @media (max-width: 768px) {
         width: 100%;
         padding: 1vh;
-        border-radius: 0.5vh;
+        border-radius: 1vh;
         margin-bottom: 2vh;
     }
 }
@@ -188,7 +188,8 @@ section, footer {
     word-wrap: break-word;
 
     @media (max-width: 768px) {
-        font-size: 2vh;
+        margin: 1vh 2vh 1vh 0.5vh;
+        font-size: 2.5vh;
     }
 }
 
@@ -198,7 +199,8 @@ section, footer {
     word-wrap: break-word;
 
     @media (max-width: 768px) {
-        font-size: 1vh;
+        margin: 0.5vh 2vh 1vh 0.5vh;
+        font-size: 2.2vh;
     }
 }
 
@@ -211,9 +213,9 @@ section, footer {
     overflow-y: hidden;
 
     @media (max-width: 768px) {
-        height: 40vh;
+        height: 30vh;
         padding: 1vh;
-        border-radius: 0.5vh;
+        border-radius: 1vh;
     }
 }
 
