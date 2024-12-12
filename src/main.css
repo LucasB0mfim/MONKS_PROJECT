@@ -51,16 +51,28 @@ body {
     text-align: center;
 }
 
+.header__nav-bol {
+    color: #EAE8E4;
+    font-size: 1.7vw;
+    font-weight: normal;
+    visibility: hidden;
+    margin-right: 0.3vw;
+}
+
+.header__nav-link:hover .header__nav-bol {
+    visibility: visible;
+}
 
 .header__nav-link {
-    text-decoration: none;
+    display: flex;
+    align-items: center;
     color: #EAE8E4;
     font-size: 1.042vw;
+    text-decoration: none;
 }
 
 .header__nav-link:hover {
-    color: #cac5b9;
-    font-size: 1.06vw;
+    font-weight: 600;
 }
 
 .header__start-mid {
