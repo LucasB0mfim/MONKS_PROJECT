@@ -11,6 +11,7 @@ body {
 
 .header {
     width: 100%;
+    height: 60vh;
     display: flex;
     background-color: #2d2d2d;
     border-bottom-left-radius: 1.563vw;
@@ -27,20 +28,29 @@ body {
     height: 10%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header__start-top img {
     width: 7.292vw;
+    cursor: pointer;
+}
+
+.header__nav {
+    width: 80%;
 }
 
 .header__nav-list {
     list-style: none;
     display: flex;
+    justify-content: space-between;
 }
 
 .header__nav-item {
-    margin-left: 1.25vw;
+    width: 8vw;
+    text-align: center;
 }
+
 
 .header__nav-link {
     text-decoration: none;
@@ -48,22 +58,27 @@ body {
     font-size: 1.042vw;
 }
 
+.header__nav-link:hover {
+    color: #cac5b9;
+}
+
 .header__start-mid {
-    height: 60%;
+    height: 50%;
+    margin-top: 2vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .header__start-title {
     font-size: 2.5vw;
     color: #EAE8E4;
-    margin-top: 0.417vw;
 }
 
 .header__start-description {
-    font-size: 1.25vw;
     color: #EAE8E4;
+    font-size: 1.25vw;
+    font-weight: lighter;
 }
 
 .header__start-bot {
@@ -480,4 +495,48 @@ footer {
     border: none;
     border-radius: 0.208vw;
     background-color: #DFBBFE;
+}
+
+.row {
+    border: 1px solid #DFBBFE;
+}
+
+.social {
+    padding: 2.083vw 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social__image {
+    height: 1.8vw;
+    margin: 0vw 1vw;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social__image:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.links {
+    padding-bottom: 2.083vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.links__phase {
+    color: #EAE8E4;
+    font-size: 1.51vw;
+    padding-bottom: 1vw;
+}
+
+.links__span {
+    color: #EAE8E4;
+    font-size: 1.042vw;
+    font-weight: lighter;
+    margin: 0vw 2.083vw;
+    cursor: pointer;
 }

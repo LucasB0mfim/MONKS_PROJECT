@@ -1,6 +1,4 @@
-import { cities } from './cities.cards.js';
-import { products } from './products.list.js';
-import { plans } from './plans.cards.js';
+import { cities, products, plans } from './api.js';
 
 const cardsContainer = document.getElementById('cards-container');
 const productsContainer = document.querySelector('.product__container');
