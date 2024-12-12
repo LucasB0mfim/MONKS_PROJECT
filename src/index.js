@@ -1,6 +1,6 @@
 import { cities, products, plans } from './api.js';
 
-const cardsContainer = document.querySelector('.cards');
+const cardsContainer = document.querySelector('.cards__container');
 const productsContainer = document.querySelector('.product__container');
 const plansContainer = document.querySelector('.plan__container');
 
