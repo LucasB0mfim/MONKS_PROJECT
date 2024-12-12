@@ -411,21 +411,23 @@ footer {
 }
 
 .validate__security-text {
-    width: 30%;
+    width: 37%;
     color: #2D2D2D;
-    font-size: 1.25vw;
-    font-weight: 600;
+    font-size: 1.5vw;
 }
 
 .validate__math-operation {
-    width: 30%;
-    padding: 0.833vw 2.604vw;
+    width: 20%;
+    padding: 0.5vw 1.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 0.417vw;
     background-color: #DFDCD5;
 }
 
 .validate__math-input {
-    width: 40%;
+    width: 100%;
     color: #7D26C9;
     font-weight: 600;
     font-size: 1.042vw;
@@ -444,10 +446,11 @@ footer {
 .validate__math-operator,
 .validate__math-equals {
     font-weight: 600;
+    font-size: 1.5vw;
 }
 
 .validate__math-result {
-    width: 24%;
+    width: 33%;
     padding: 0.833vw;
     outline: none;
     border: none;
@@ -469,11 +472,11 @@ footer {
 }
 
 .validate__button-send {
-    width: 15.5vw;
+    width: 10vw;
     cursor: pointer;
     font-weight: 600;
     font-size: 0.84vw;
-    padding: 0.833vw 2.604vw;
+    padding: 0.833vw 2.3vw;
     border: none;
     border-radius: 0.208vw;
     background-color: #DFBBFE;
