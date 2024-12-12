@@ -1,12 +1,12 @@
 import { cities, products, plans } from './api.js';
 
-const cardsContainer = document.getElementById('cards-container');
+const cardsContainer = document.querySelector('.cards');
 const productsContainer = document.querySelector('.product__container');
 const plansContainer = document.querySelector('.plan__container');
 
 cities.forEach(city => {
     const card = document.createElement('div');
-    card.className = 'card';
+    card.className = 'card__list';
     card.innerHTML = `
         <div class="card__image"><img src="${city.image}" alt="${city.title}"></div>
         <h3 class="card__title">${city.title}</h3>
