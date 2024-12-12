@@ -70,11 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Adicione um preventDefault no submit do formulário
     securityForm.addEventListener('submit', (event) => {
         event.preventDefault();
     });
 
-    // Use click no botão
     validateButton.addEventListener('click', validate);
 });
