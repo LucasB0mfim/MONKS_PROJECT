@@ -133,7 +133,7 @@ section, footer {
     font-size: 2.083vw;
 
     @media (max-width: 768px) {
-        font-size: 2.1vh;
+        font-size: 3vh;
     }
 }
 
@@ -144,7 +144,7 @@ section, footer {
     margin-bottom: 1.771vw;
 
     @media (max-width: 768px) {
-        font-size: 1.2vh;
+        font-size: 2.2vh;
         margin-top: 0.5vh;
         margin-bottom: 1.8vh;
     }
@@ -200,7 +200,7 @@ section, footer {
 
     @media (max-width: 768px) {
         margin: 0.5vh 2vh 1vh 0.5vh;
-        font-size: 2.2vh;
+        font-size: 2vh;
     }
 }
 
