@@ -76,3 +76,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     validateButton.addEventListener('click', validate);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.header__nav');
+
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+            nav.classList.remove('active');
+        }
+    });
+});
