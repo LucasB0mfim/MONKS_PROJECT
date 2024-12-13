@@ -426,6 +426,10 @@ section, footer {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    @media(max-width: 768px) {
+        flex-direction: row;
+    }
 }
 
 .download__app {
@@ -434,7 +438,7 @@ section, footer {
     transition: transform 0.3s ease;
 
     @media (max-width: 768px) {
-        width: 100%;
+        width: 47%;
         height: auto;
     }
 }
@@ -446,10 +450,6 @@ section, footer {
 
 .download__app:first-child {
     margin-bottom: 0.3vw;
-
-    @media (max-width: 768px) {
-        margin-bottom: 1vh;
-    }
 }
 
 .product {
@@ -686,7 +686,7 @@ footer {
 
     @media (max-width: 768px) {
         width: 100%;
-        padding: 0.833vh;
+        padding: 1vh;
         border-radius: 0.417vh;
         font-size: 1.5vh;
     }
@@ -744,7 +744,7 @@ footer {
 
     @media (max-width: 768px) {
         width: 45%;
-        padding: 0.8vh 1.2vh;
+        padding: 1vh 1.2vh;
         border-radius: 0.417vh;
     }
 }
@@ -795,7 +795,7 @@ footer {
 
     @media (max-width: 768px) {
         width: 45%;
-        padding: 0.833vh;
+        padding: 1vh;
         border-radius: 0.417vh;
         font-size: 1.5vh;
     }
@@ -834,7 +834,7 @@ footer {
     @media (max-width: 768px) {
         width: 50%;
         font-size: 1.5vh;
-        padding: 0.8vh 2.3vh;
+        padding: 1vh 2.3vh;
         border-radius: 0.5vh;
     }
 }
@@ -866,7 +866,7 @@ footer {
     transition: transform 0.3s ease;
 
     @media (max-width: 768px) {
-        height: 2.5vh;
+        height: 3vh;
         margin: 0vh 1vh;
     }
 }
@@ -894,7 +894,7 @@ footer {
     padding-bottom: 1.5vw;
 
     @media (max-width: 768px) {
-        font-size: 2.5vh;
+        font-size: 2.2vh;
         padding-bottom: 2vh;
     }
 }
@@ -925,6 +925,6 @@ footer {
         gap: 1vw;
         margin: 0vh;
         flex-wrap: wrap;
-        font-size: 2vh;
+        font-size: 1.7vh;
     }
 }
