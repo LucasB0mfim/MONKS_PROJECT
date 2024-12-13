@@ -26,7 +26,6 @@ body {
 .header__start {
     width: 50%;
     padding: 1vw 4vw;
-
     padding: 1vh 4vh;
 }
 
@@ -309,7 +308,8 @@ section, footer {
     font-size: 2.083vw;
 
     @media (max-width: 768px) {
-        margin: 1vh 2vh 1vh 0.5vh;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
         font-size: 2.5vh;
     }
 }
@@ -323,7 +323,7 @@ section, footer {
     @media (max-width: 768px) {
         font-size: 2vh;
         margin-top: 0.417vh;
-        margin-bottom: 1.771vh;
+        margin-bottom: 1.8vh;
     }
 }
 
@@ -407,7 +407,7 @@ section, footer {
 
     @media (max-width: 768px) {
         font-size: 2.5vh;
-        margin-bottom: 0.5vh;
+        margin-bottom: 1vh;
     }
 }
 
@@ -417,7 +417,7 @@ section, footer {
 
     @media (max-width: 768px) {
         font-size: 2vh;
-        margin-bottom: 2vh;
+        margin-bottom: 1.8vh;
     }
 }
 
@@ -602,7 +602,7 @@ footer {
     height: 18vw;
 
     @media (max-width: 768px) {
-        width: 80%;
+        width: 70%;
         height: auto;
         margin-bottom: 2vh;
     }
@@ -616,7 +616,7 @@ footer {
 
     @media (max-width: 768px) {
         width: 100%;
-        padding: 1.25vh;
+        padding: 2vh;
         border-radius: 1.25vh;
         margin-top: 2vh;
         margin-bottom: 2vh;
@@ -629,6 +629,7 @@ footer {
 
     @media (max-width: 768px) {
         font-size: 2.5vh;
+        margin-bottom: 1vh;
     }
 }
 
@@ -636,7 +637,8 @@ footer {
     margin-top: 0.417vw;
 
     @media (max-width: 768px) {
-        margin-top: 0.417vh;
+        margin-top: 0;
+        margin-bottom: 1.8vh;
     }
 }
 
@@ -645,8 +647,8 @@ footer {
     margin-bottom: 1.667vw;
 
     @media (max-width: 768px) {
-        margin-top: 1.25vh;
-        margin-bottom: 1.667vh;
+        margin-top: 0vh;
+        margin-bottom: 1.8vh;
     }
 }
 
@@ -712,12 +714,22 @@ footer {
     width: 37%;
     color: #2D2D2D;
     font-size: 1.5vw;
+    font-weight: 600;
 
     @media (max-width: 768px) {
         width: 109%;
         text-align: center;
-        font-size: 2.5vh;
-        font-weight: 600;
+        font-size: 2vh;
+    }
+}
+
+.validate__math-container {
+    @media(max-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
     }
 }
 
@@ -731,8 +743,8 @@ footer {
     background-color: #DFDCD5;
 
     @media (max-width: 768px) {
-        width: 20%;
-        padding: 0.5vh 1.2vh;
+        width: 45%;
+        padding: 0.8vh 1.2vh;
         border-radius: 0.417vh;
     }
 }
@@ -748,7 +760,7 @@ footer {
     text-align: center;
 
     @media(max-width: 768px) {
-        font-size: 1.042vh;
+        font-size: 1.5vh;
     }
 }
 
@@ -774,7 +786,7 @@ footer {
 
 .validate__math-result {
     width: 33%;
-    padding: 0.833vw;
+    padding: 0.8vw;
     outline: none;
     border: none;
     border-radius: 0.417vw;
@@ -782,17 +794,18 @@ footer {
     font-size: 1vw;
 
     @media (max-width: 768px) {
+        width: 45%;
         padding: 0.833vh;
         border-radius: 0.417vh;
-        font-size: 1vh;
+        font-size: 1.5vh;
     }
 }
 
 .validate__math-result:placeholder {
     font-size: 1vw;
 
-    @media (max-width: 768px) {
-        font-size: 1vh;
+    @media(max-width: 768px) {
+        font-size: 1.5vh;
     }
 }
 
@@ -804,7 +817,7 @@ footer {
     margin-top: 1.667vw;
 
     @media (max-width: 768px) {
-        margin-top: 1.667vh;
+        margin-top: 0;
     }
 }
 
@@ -821,7 +834,7 @@ footer {
     @media (max-width: 768px) {
         width: 50%;
         font-size: 1.5vh;
-        padding: 0.833vh 2.3vh;
+        padding: 0.8vh 2.3vh;
         border-radius: 0.5vh;
     }
 }
@@ -871,7 +884,7 @@ footer {
     flex-direction: column;
 
     @media (max-width: 768px) {
-        padding-bottom: 2.083vh;
+        padding-bottom: 0vh;
     }
 }
 
@@ -881,7 +894,7 @@ footer {
     padding-bottom: 1.5vw;
 
     @media (max-width: 768px) {
-        font-size: 1.5vh;
+        font-size: 2.5vh;
         padding-bottom: 2vh;
     }
 }
@@ -912,6 +925,6 @@ footer {
         gap: 1vw;
         margin: 0vh;
         flex-wrap: wrap;
-        font-size: 1.5vh;
+        font-size: 2vh;
     }
 }
