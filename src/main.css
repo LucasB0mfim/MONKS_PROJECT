@@ -166,7 +166,7 @@ body {
     @media(max-width: 768px) {
         width: 100%;
         display: flex;
-        padding: 1.7vh 4vh;
+        padding: 2.2vh 4vh;
         justify-content: start;
         align-items: end;
         background-color: #2D2D2D;
@@ -247,6 +247,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 768px) {
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
 }
 
 .header__start-bot img {
@@ -264,6 +269,7 @@ body {
     justify-content: end;
 
     @media (max-width: 768px) {
+        position: relative;
         padding-right: 0;
     }
 }
@@ -272,7 +278,11 @@ body {
     width: 75%;
 
     @media(max-width: 768px) {
-        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        left: 0%;
+        height: 100%;
+        width: 170%;
     }
 }
 
