@@ -35,7 +35,7 @@ body {
 .header__start-top {
     height: 10%;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
 }
 
 .header__start-top img {
@@ -43,7 +43,7 @@ body {
     cursor: pointer;
 
     @media (max-width: 768px) {
-        width: 15vh;
+        width: 25vw;
     }
 }
 
@@ -172,7 +172,7 @@ body {
 
 .header__nav-mobile img{
     @media(max-width: 768px) {
-        width: 15vh;
+        width: 25vw;
     }
 }
 
@@ -253,7 +253,7 @@ body {
     justify-content: end;
 
     @media (max-width: 768px) {
-        padding-right: 2.4vh;
+        padding-right: 0;
     }
 }
 
