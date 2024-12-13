@@ -28,14 +28,13 @@ body {
     padding: 1vw 4vw;
     
     @media(max-width: 768px) {
-        padding: 1vh 4vh;
+        padding: 2vh 4vh;
     }
 }
 
 .header__start-top {
     height: 10%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -44,18 +43,36 @@ body {
     cursor: pointer;
 
     @media (max-width: 768px) {
-        width: 10vh;
+        width: 15vh;
     }
 }
 
 .header__nav {
     width: 80%;
+
+    @media(max-width: 768px) {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #DFBBFE;
+        z-index: 10;
+        height: 50vh;
+    }
 }
 
 .header__nav-list {
     list-style: none;
     display: flex;
     justify-content: space-between;
+
+    @media(max-width: 768px) {
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding: 2vh 4vh;
+    }
 }
 
 .header__nav-item {
@@ -63,7 +80,8 @@ body {
     text-align: center;
 
     @media(max-width: 768px) {
-        width: 8vh;
+        width: auto;
+        margin: 10px 0;
     }
 }
 
@@ -75,8 +93,10 @@ body {
     margin-right: 0.3vw;
 
     @media(max-width: 768px) {
-        font-size: 1.7vh;
+        font-size: 4vh;
         margin-right: 0.3vh;
+        visibility: visible;
+        color: #2D2D2D;
     }
 }
 
@@ -92,7 +112,9 @@ body {
     text-decoration: none;
 
     @media (max-width: 768px) {
-        font-size: 1.042vh;
+        color: #2D2D2D;
+        font-size: 2.5vh;
+        font-weight: 600;
     }
 }
 
@@ -100,52 +122,37 @@ body {
     font-weight: 600;
 }
 
-.hamburger {
+.hamburger,
+.hamburger-inside {
     display: none;
     background: none;
     border: none;
     cursor: pointer;
     flex-direction: column;
     justify-content: space-around;
-    width: 15px;
-    height: 10px;
+    width: 20px;
+    height: 16px;
+    margin-left: 2.1vh;
+
+    @media(max-width: 768px) {
+        display: flex;
+    }
 }
 
 .hamburger-line {
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: #EAE8E4;
 }
 
 @media (max-width: 768px) {
-    .header__nav {
-        display: none;
-        position: absolute;
+    .header__nav.active {
+        position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        background-color: #2d2d2d;
-        z-index: 10;
-        height: 50vh;
-    }
-
-    .header__nav.active {
+        overflow: hidden;
         display: block;
-        padding: 1vh 4vh;
-    }
-
-    .header__nav-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header__nav-item {
-        margin: 10px 0;
-        width: auto;
-    }
-
-    .hamburger {
-        display: flex;
+        height: auto;
     }
 }
 
@@ -155,19 +162,45 @@ body {
     @media(max-width: 768px) {
         width: 100%;
         display: flex;
-        align-items: center;
+        padding: 2vh 4vh;
+        justify-content: start;
+        background-color: #2D2D2D;
+        border-bottom-right-radius: 2vh;
+        border-bottom-left-radius: 2vh;
     }
 }
 
 .header__nav-mobile img{
     @media(max-width: 768px) {
-        width: 10vh;
-        margin-right: 1vh;
+        width: 15vh;
+    }
+}
+
+.header__nav-image {
+    display: none;
+
+    @media(max-width: 768px) {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.header__nav-background {
+    display: none;
+
+    @media(max-width: 768px) {
+        display: flex;
+        width: 100%;
+        height: 50vh;
+        justify-content: center;
+        align-items: center;
+        background-color: #2D2D2D;
     }
 }
 
 .header__start-mid {
-    height: 50%;
     margin-top: 2vw;
     display: flex;
     flex-direction: column;
@@ -184,6 +217,7 @@ body {
 
     @media (max-width: 768px) {
         font-size: 2.5vh;
+        margin-bottom: 1vh;
     }
 }
 
@@ -193,12 +227,12 @@ body {
     font-weight: lighter;
 
     @media (max-width: 768px) {
-        font-size: 1.25vh;
+        font-size: 1.5vh;
+        margin-bottom: 1.8vh;
     }
 }
 
 .header__start-bot {
-    height: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -208,7 +242,7 @@ body {
     width: 4vw;
 
     @media (max-width: 768px) {
-        width: 4vh;
+        width: 5vh;
     }
 }
 
@@ -225,6 +259,10 @@ body {
 
 .header__end img {
     width: 75%;
+
+    @media(max-width: 768px) {
+        width: 100%;
+    }
 }
 
 section, footer {

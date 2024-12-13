@@ -78,16 +78,35 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger');
+    const hamburgerOutside = document.querySelector('.header__start-top .hamburger');
+    const hamburgerInside = document.querySelector('.hamburger-inside');
+    const backImage = document.querySelector('.header__nav-image');
     const nav = document.querySelector('.header__nav');
 
-    hamburger.addEventListener('click', () => {
+    const closeMenu = () => {
+        nav.classList.remove('active');
+    };
+
+    hamburgerOutside.addEventListener('click', (event) => {
+        event.stopPropagation();
         nav.classList.toggle('active');
     });
 
+    hamburgerInside.addEventListener('click', (event) => {
+        event.stopPropagation();
+        closeMenu();
+    });
+
+    backImage.addEventListener('click', (event) => {
+        event.stopPropagation();
+        closeMenu();
+    });
+
     document.addEventListener('click', (event) => {
-        if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
-            nav.classList.remove('active');
+        if (!nav.contains(event.target) && 
+            !hamburgerOutside.contains(event.target) && 
+            !hamburgerInside.contains(event.target)) {
+            closeMenu();
         }
     });
 });
