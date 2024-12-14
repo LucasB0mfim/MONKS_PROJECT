@@ -16,7 +16,7 @@ Para simular o recebimento de dados de uma API, foi criado um arquivo `api.js`. 
 
 ### Images
 
-Todas as imagens utilizadas no projeto estão salvas na pasta `assets/images`.
+Todas as imagens utilizadas no projeto estão armazenadas em outro reposítorio para melhorar a organização.
 
 ### Estilos
 
@@ -24,7 +24,7 @@ Toda a estilização foi realizada dentro do arquivo `main.css`.
 
 ### Scripts
 
-Toda a lógica de validação de calculo, renderização de componentes estão armazenado dentro do arquivo `index.js`.
+Toda a lógica de validação de calculo, renderização de componentes estão armazenado dentro do arquivo `main.js`.
 
 ### Página inicial
 
@@ -37,9 +37,15 @@ O projeto é simples e pode ser executado diretamente ao abrir o arquivo `index.
 ### Recomendo o seguinte método:
 
 1. **Extensão Go Live no VSCode:**
-   - Baixe a extensão **Go Live** no Visual Studio Code.
+   - Baixe a extensão **Live Server** no Visual Studio Code.
    - Abra o arquivo `index.html`.
    - Clique em "Go Live" na barra inferior direita do editor para iniciar um servidor local e visualizar o projeto em funcionamento.
+
+<img src="https://github.com/LucasB0mfim/MONKS_IMAGES/blob/main/images/LiveServer.png?raw=true" />
+
+---
+
+<img src="https://github.com/LucasB0mfim/MONKS_IMAGES/blob/main/images/execute.png?raw=true" />
 
 ## 🌐 Demonstração Online
 
