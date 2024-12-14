@@ -646,6 +646,7 @@ section, footer {
     color: #7D26C9;
     font-weight: 600;
     font-size: 1.042vw;
+    text-align: center;
     padding: 0.833vw 2.604vw;
     cursor: pointer;
     border: 1px solid #7D26C9;
