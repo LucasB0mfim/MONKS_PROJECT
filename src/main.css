@@ -1092,10 +1092,10 @@ footer {
     text-decoration: none;
 }
 
-.links__span {
+.links-section {
     color: #EAE8E4;
+    width: 10vw;
     gap: 1vw;
-    margin: 0vw 2vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -1105,9 +1105,13 @@ footer {
 
     @media (max-width: 768px) {
         justify-content: space-evenly;
+        width: 10vh;
         gap: 1vh;
-        margin: 0;
         flex-wrap: wrap;
         font-size: 1.7vh;
     }
+}
+
+.links-section:hover {
+    font-family: 'HelveticaNeueBold';
 }
