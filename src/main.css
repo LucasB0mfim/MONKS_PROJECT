@@ -850,6 +850,7 @@ footer {
 
 .validate__input {
     width: 25vw;
+    color: #2D2D2D;
     padding: 0.833vw;
     outline: none;
     border: none;
@@ -859,17 +860,9 @@ footer {
 
     @media (max-width: 768px) {
         width: 100%;
-        padding: 1vh;
+        padding: 1.8vh;
         border-radius: 0.417vh;
-        font-size: 1.5vh;
-    }
-}
-
-.validate__input:placeholder {
-    font-size: 1vw;
-
-    @media (max-width: 768px) {
-        font-size: 1.5vh;
+        font-size: 1.8vh;
     }
 }
 
@@ -887,12 +880,11 @@ footer {
     width: auto;
     color: #2D2D2D;
     font-size: 1.5vw;
-    font-weight: 600;
 
     @media (max-width: 768px) {
         width: 100%;
         text-align: center;
-        font-size: 2vh;
+        font-size: 2.5vh;
     }
 }
 
@@ -903,6 +895,7 @@ footer {
     justify-content: space-between;
 
     @media(max-width: 768px) {
+        width: 80%;
         margin-top: 2vh;
         margin-bottom: 2vh;
     }
@@ -919,7 +912,8 @@ footer {
 
     @media (max-width: 768px) {
         width: 45%;
-        padding: 1vh 1.2vh;
+        padding: 1.8vh 1.2vh;
+        font-size: 1.8vh;
         border-radius: 0.417vh;
     }
 }
@@ -927,7 +921,7 @@ footer {
 .validate__math-input {
     width: 100%;
     color: #7D26C9;
-    font-weight: 600;
+    font-weight: bold;
     font-size: 1.042vw;
     border: none;
     outline: none;
@@ -935,7 +929,7 @@ footer {
     text-align: center;
 
     @media(max-width: 768px) {
-        font-size: 1.5vh;
+        font-size: 1.8vh;
     }
 }
 
@@ -956,22 +950,25 @@ footer {
 
     @media (max-width: 768px) {
         font-size: 1.5vh;
+        font-family: 'HelveticaNeueBold';
     }
 }
 
 .validate__math-result {
     padding: 0.8vw;
+    font-size: 1vw;
+    font-weight: bold;
+    text-align: center;
     outline: none;
     border: none;
     border-radius: 0.417vw;
     background-color: #FFF;
-    font-size: 1vw;
 
     @media (max-width: 768px) {
         width: 45%;
-        padding: 1vh;
+        padding: 1.8vh;
         border-radius: 0.417vh;
-        font-size: 1.5vh;
+        font-size: 1.8vh;
     }
 }
 
@@ -996,6 +993,7 @@ footer {
 }
 
 .validate__button-send {
+    position: relative;
     width: 12.8vw;
     cursor: pointer;
     font-weight: 600;
@@ -1008,10 +1006,14 @@ footer {
 
     @media (max-width: 768px) {
         width: 50%;
-        font-size: 1.5vh;
-        padding: 1vh 2.3vh;
+        font-size: 1.8vh;
+        padding: 1.8vh 2.3vh;
         border-radius: 0.5vh;
     }
+}
+
+.validate__button-send:active {
+    bottom: -2px;
 }
 
 .row {
