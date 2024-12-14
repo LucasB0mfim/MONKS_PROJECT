@@ -912,7 +912,6 @@ footer {
 
     @media (max-width: 768px) {
         width: 45%;
-        padding: 1.8vh 1.2vh;
         font-size: 1.8vh;
         border-radius: 0.417vh;
     }
@@ -929,8 +928,8 @@ footer {
     text-align: center;
 
     @media(max-width: 768px) {
+        height: 5vh;
         font-size: 1.8vh;
-        height: 3vh;
     }
 }
 
@@ -957,8 +956,7 @@ footer {
 
     @media (max-width: 768px) {
         width: 45%;
-        height: 6.5vh;
-        padding: 1.8vh 1.2vh;
+        height: 5vh;
         border-radius: 0.417vh;
         font-size: 1.8vh;
     }
