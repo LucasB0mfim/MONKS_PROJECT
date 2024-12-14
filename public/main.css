@@ -930,16 +930,7 @@ footer {
 
     @media(max-width: 768px) {
         font-size: 1.8vh;
-    }
-}
-
-.validate__math-input::placeholder {
-    color: #7D26C9;
-    font-size: 1.042vw;
-    font-weight: 600;
-
-    @media (max-width: 768px) {
-        font-size: 1.042vh;
+        height: 3vh;
     }
 }
 
@@ -949,7 +940,7 @@ footer {
     font-size: 1.5vw;
 
     @media (max-width: 768px) {
-        font-size: 1.5vh;
+        font-size: 2vh;
         font-family: 'HelveticaNeueBold';
     }
 }
@@ -966,17 +957,10 @@ footer {
 
     @media (max-width: 768px) {
         width: 45%;
-        padding: 1.8vh;
+        height: 6.5vh;
+        padding: 1.8vh 1.2vh;
         border-radius: 0.417vh;
         font-size: 1.8vh;
-    }
-}
-
-.validate__math-result:placeholder {
-    font-size: 1vw;
-
-    @media(max-width: 768px) {
-        font-size: 1.5vh;
     }
 }
 
@@ -1086,7 +1070,7 @@ footer {
     gap: 1vw;
 
     @media(max-width: 768px) {
-        gap: 1vh;
+        gap: 2vh;
     }
 }
 
