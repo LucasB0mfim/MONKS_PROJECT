@@ -2,16 +2,21 @@
 import { projects, services, plans } from './api/api.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const projectsContainer = getInputElement('.projects__container');
-    const servicesContainer = getInputElement('.services__container');
-    const plansContainer = getInputElement('.plans__container');
-    
     const hamburgerOutside = getInputElement('.header__start-top .hamburger');
     const hamburgerInside = getInputElement('.hamburger-inside');
     const backImage = getInputElement('.header__nav-image');
     const nav = getInputElement('.header__nav');
     const navBackground = getInputElement('.header__nav-background');
     const navLinks = document.querySelectorAll('.header__nav-link');
+
+    const projectsContainer = getInputElement('.projects__container');
+    const servicesContainer = getInputElement('.services__container');
+    const plansContainer = getInputElement('.plans__container');
+
+    const form = getInputElement('.validate__security-form');
+    const inputNumberForm = document.querySelectorAll('.validate__math-input');
+    const responseForm = getInputElement('.validate__math-result');
+    const inputRequired = document.querySelectorAll('.validate__input');
     
     // Função para selecionar elementos com base na classe
     function getInputElement(className) {
@@ -36,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Função para gerar números aleatórios
     function generateRandomNumber() {
-        return Math.floor(Math.random() * 1000);
+        return Math.floor(Math.random() * 200);
     }
 
     // Função para definir valores em elementos de input
@@ -47,13 +52,53 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Armazena a resposta correta
+    let sum = 0;
+
     // Função para gerar números e renderizar nos campos de input
     function generatedNumbers() {
-        const inputNumber = getInputElement('.validate__math-input');
         const firstNumber = generateRandomNumber();
         const lastNumber = generateRandomNumber();
-        setInputValue(inputNumber, [firstNumber, lastNumber]);
+        setInputValue(inputNumberForm, [firstNumber, lastNumber]);
+        sum = firstNumber + lastNumber;
     }
+    
+    // Função para verificar a resposta do usuário
+    function generatedResponse(event) {
+        event.preventDefault();
+        if (parseInt(responseForm.value) === sum) {
+            alert('Parabéns! Tome um cookie como recompensa 🍪.');
+            inputRequired.forEach(input => input.value = '');
+            responseForm.value = '';
+        } else {
+            alert('Ops... Você errou! Tente de novo, você consegue!');
+            responseForm.value = '';
+        }
+    }
+
+    generatedNumbers();
+
+    const openMenu = () => {
+        nav.classList.add('active');
+    };
+
+    const closeMenu = () => {
+        nav.classList.remove('active');
+    };
+
+    handleMenu(hamburgerOutside, openMenu);
+    handleMenu(hamburgerInside, closeMenu);
+    handleMenu(backImage, closeMenu);
+
+    // Fecha o menu após clicar em algum atalho
+    navLinks.forEach(link => handleMenu(link, closeMenu));
+
+    // Fecha o menu ao clicar na área de fundo
+    document.addEventListener('click', (event) => {
+        if (navBackground.contains(event.target)) {
+            closeMenu();
+        }
+    });
 
     // Criando cards
     projects.forEach(project => {
@@ -83,27 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         createElement(plansContainer, 'plan__list', content);
     });
 
-    generatedNumbers();
-
-    const openMenu = () => {
-        nav.classList.add('active');
-    };
-
-    const closeMenu = () => {
-        nav.classList.remove('active');
-    };
-
-    handleMenu(hamburgerOutside, openMenu);
-    handleMenu(hamburgerInside, closeMenu);
-    handleMenu(backImage, closeMenu);
-
-    // Fecha o menu após clicar em algum atalho
-    navLinks.forEach(link => handleMenu(link, closeMenu));
-
-    // Fecha o menu ao clicar na área de fundo
-    document.addEventListener('click', (event) => {
-        if (navBackground.contains(event.target)) {
-            closeMenu();
-        }
+    form.addEventListener('submit', (event) => {
+        generatedResponse(event);
     });
 });
