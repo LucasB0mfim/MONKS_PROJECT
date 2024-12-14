@@ -1,8 +1,26 @@
+@font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('./assets/fonts/HelveticaNeueLight.otf') format('opentype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueBold';
+    src: url('./assets/fonts/HelveticaNeueBold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'HelveticaNeueLight', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -27,6 +45,9 @@ body {
 .header__start {
     width: 50%;
     padding: 1vw 4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     
     @media(max-width: 768px) {
         padding: 2vh 4vh;
@@ -123,7 +144,7 @@ body {
 }
 
 .header__nav-link:hover {
-    font-weight: 600;
+    font-family: 'HelveticaNeueBold', sans-serif;
 }
 
 .hamburger,
@@ -213,7 +234,6 @@ body {
 
 .header__start-mid {
     height: 50%;
-    margin-top: 2vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -236,7 +256,7 @@ body {
 
 .header__start-description {
     color: #EAE8E4;
-    font-size: 1.25vw;
+    font-size: 1.5vw;
     font-weight: lighter;
 
     @media (max-width: 768px) {
@@ -259,7 +279,7 @@ body {
 }
 
 .header__start-bot img {
-    width: 4vw;
+    width: 5vw;
 
     @media (max-width: 768px) {
         width: 5vh;
@@ -318,7 +338,7 @@ section, footer {
 
 .cards__description {
     color: #2D2D2D;
-    font-size: 1.25vw;
+    font-size: 1.4vw;
     margin-top: 0.417vw;
     margin-bottom: 1.771vw;
 
@@ -379,7 +399,7 @@ section, footer {
 
 .cards__container .card__list .card__description {
     margin: 0.5vw 2vw 1vw 0.5vw;
-    font-size: 1.042vw;
+    font-size: 1.13vw;
     word-wrap: break-word;
 
     @media (max-width: 768px) {
@@ -452,7 +472,7 @@ section, footer {
 
 .photos__description {
     color: #2D2D2D;
-    font-size: 1.25vw;
+    font-size: 1.4vw;
     margin-top: 0.417vw;
     margin-bottom: 1.771vw;
 
@@ -666,10 +686,11 @@ section, footer {
 
 .plan__card {
     width: 26vw;
+    height: 21vw;
     padding: 1.25vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     cursor: pointer;
     border: 1.5px solid #DFBBFE;
@@ -680,6 +701,7 @@ section, footer {
 
     @media (max-width: 768px) {
         width: 100%;
+        height: auto;
         padding: 2vh;
         margin-bottom: 2vh;
         border-radius: 2vw;
@@ -692,30 +714,26 @@ section, footer {
 }
 
 .plan__card-title {
-    font-size: 1.2vw;
+    font-size: 1.25vw;
     align-self: flex-start;
-    margin-bottom: 1vw;
 
     @media (max-width: 768px) {
         font-size: 2.5vh;
-        margin-bottom: 0vh;
     }
 }
 
-.plan__card-phase {
-    font-size: 1.1vw;
-    margin-bottom: 1.8vw;
+.plan__card-description {
+    font-size: 1.25vw;
 
     @media (max-width: 768px) {
         font-size: 2vh;
-        margin: 4vh 0vh;
     }
 }
 
 .plan__card-button {
     cursor: pointer;
     padding: 0.7vw 4vw;
-    font-size: 0.84vw;
+    font-size: 1vw;
     font-weight: 600;
     border: none;
     border-radius: 0.208vw;
@@ -808,7 +826,7 @@ footer {
 
 .validate__text {
     color: #2D2D2D;
-    font-size: 1.042vw;
+    font-size: 1.25vw;
 
     @media (max-width: 768px) {
         font-size: 2vh;
@@ -980,7 +998,7 @@ footer {
     width: 12.8vw;
     cursor: pointer;
     font-weight: 600;
-    font-size: 0.84vw;
+    font-size: 1vw;
     padding: 0.833vw 2.3vw;
     border: none;
     border-radius: 0.208vw;
@@ -1047,7 +1065,7 @@ footer {
 
 .links__phase {
     color: #EAE8E4;
-    font-size: 1.50vw;
+    font-size: 1.25vw;
     padding-bottom: 1.5vw;
 
     @media (max-width: 768px) {
@@ -1066,6 +1084,10 @@ footer {
     @media(max-width: 768px) {
         gap: 1vh;
     }
+}
+
+.links__container a {
+    text-decoration: none;
 }
 
 .links__span {

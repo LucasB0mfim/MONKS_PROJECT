@@ -28,8 +28,8 @@ plans.forEach(plan => {
     planDiv.innerHTML = `
         <div class="plan__card">
             <h2 class="plan__card-title">${plan.title}</h2>
-            <p class="plan__card-phase">${plan.phase}</p>
-            <button class="plan__card-button">Lorem ipsum</button>                     
+            <p class="plan__card-description">${plan.phase}</p>
+            <button class="plan__card-button">Ver Detalhes</button>                     
         </div>
     `;
     plansContainer.appendChild(planDiv);
