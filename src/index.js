@@ -1,160 +1,105 @@
+// Importando os dados simulados da 'api' mockada
 import { cities, products, plans } from './api/api.js';
 
-const cardsContainer = document.querySelector('.cards__container');
-const productsContainer = document.querySelector('.product__container');
-const plansContainer = document.querySelector('.plan__container');
+// Função para criar a div
+function createElement(container, className, content) {
+    const div = document.createElement('div');
+    div.className = className;
+    div.innerHTML = content;
+    container.appendChild(div);
+}
 
+// Criando cards
 cities.forEach(city => {
-    const card = document.createElement('div');
-
-    card.className = 'card__list';
-    card.innerHTML = `
+    const content = `
         <div class="card__image"><img src="${city.image}" alt="${city.title}"></div>
         <h3 class="card__title">${city.title}</h3>
         <p class="card__description">${city.description}</p>
     `;
-    cardsContainer.appendChild(card);
+    createElement(cardsContainer, 'card__list', content);
 });
 
+// Criando produtos
 products.forEach(product => {
-    const productDiv = document.createElement('div');
-
-    productDiv.className = 'product__list';
-    productDiv.innerHTML = `<div class="product__card">${product.text}</div>`;
-    productsContainer.appendChild(productDiv);
+    const content = `<div class="product__card">${product.text}</div>`;
+    createElement(productsContainer, 'product__list', content);
 });
 
+// Criando planos
 plans.forEach(plan => {
-    const planDiv = document.createElement('div');
-    
-    planDiv.className = 'plan__list';
-    planDiv.innerHTML = `
+    const content = `
         <div class="plan__card">
             <h2 class="plan__card-title">${plan.title}</h2>
             <p class="plan__card-description">${plan.phase}</p>
-            <button class="plan__card-button">Ver Detalhes</button>                     
+            <button class="plan__card-button">Ver Detalhes</button>
         </div>
     `;
-    plansContainer.appendChild(planDiv);
+    createElement(plansContainer, 'plan__list', content);
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const securityForm = document.querySelector('.validate__security-form');
-    const mathInputs = document.querySelectorAll('.validate__math-input');
-    const mathResultInput = document.querySelector('.validate__math-result');
-    const validateButton = document.querySelector('.validate__button-send');
-
-    let firstNumber;
-    let secondNumber;
-
-    function generateRandomNumbers() {
-        firstNumber = Math.floor(Math.random() * 1000);
-        secondNumber = Math.floor(Math.random() * 1000);
-        
-        mathInputs[0].value = firstNumber;
-        mathInputs[1].value = secondNumber;
-
-        mathResultInput.value = '';
+    // Função para selecionar elementos com base na classe
+    function getInputElement(className) {
+        return document.querySelector(`${className}`);
     }
 
-    generateRandomNumbers();
-
-    function validate(event) {
-        const requiredInputs = document.querySelectorAll('.validate__input--required');
-        let allRequiredFilled = true;
-
-        requiredInputs.forEach(input => {
-            if (!input.value) {
-                allRequiredFilled = false;
-            }
-        });
-
-        if (!allRequiredFilled) {
-            alert('Por favor, preencha todos os campos obrigatórios.');
-            return;
-        }
-
-        const userResult = Number(mathResultInput.value);
-        const correctResult = firstNumber + secondNumber;
-
-        if (userResult !== correctResult) {
-            alert('Ops! Resultado incorreto. Tente novamente.');
-            generateRandomNumbers();
-
-            const nameInput = document.querySelector('input[type="text"][placeholder="Nome Completo*"]');
-            const emailInput = document.querySelector('input[type="email"][placeholder="Email*"]');
-            nameInput.value = '';
-            emailInput.value = '';
-
-            return;
-        }
-
-        alert('Parabéns! Formulário enviado com sucesso.');
-        securityForm.submit();
+    // Função para gerar números aleatórios
+    function generateRandomNumber() {
+        return Math.floor(Math.random() * 1000);
     }
 
-    securityForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        validate(event);
-    });
+    // Função para definir valores em elementos de input
+    function setInputValue(elements, values) {
+        if (elements.length >= 2) {
+            elements[0].value = values[0];
+            elements[1].value = values[1];
+        }
+    }
 
-    validateButton.addEventListener('click', validate);
-});
+    // Função para gerar números e renderizar nos campos de input
+    function generatedNumbers() {
+        const inputNumber = getInputElement('.validate__math-input');
+        const firstNumber = generateRandomNumber();
+        const lastNumber = generateRandomNumber();
+        setInputValue(inputNumber, [firstNumber, lastNumber]);
+    }
 
+    generatedNumbers();
 
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburgerOutside = document.querySelector('.header__start-top .hamburger');
-    const hamburgerInside = document.querySelector('.hamburger-inside');
-    const backImage = document.querySelector('.header__nav-image');
-    const nav = document.querySelector('.header__nav');
-    const atalho1 = document.getElementById('atalho1');
-    const atalho2 = document.getElementById('atalho2');
-    const atalho3 = document.getElementById('atalho3');
-    const atalho4 = document.getElementById('atalho4');
+    // A partir daqui começam os scripts para gerenciar o menu hamburguer...
+    const openMenu = () => {
+        nav.classList.add('active');
+    };
 
     const closeMenu = () => {
         nav.classList.remove('active');
     };
 
-    hamburgerOutside.addEventListener('click', (event) => {
-        event.stopPropagation();
-        nav.classList.toggle('active');
-    });
+    // Função para adicionar eventos de clique
+    function handleMenu(tag, action) {
+        tag.addEventListener('click', (event) => {
+            event.stopPropagation();
+            action();
+        });
+    }
 
-    hamburgerInside.addEventListener('click', (event) => {
-        event.stopPropagation();
-        closeMenu();
-    });
+    const hamburgerOutside = getInputElement('.header__start-top .hamburger');
+    const hamburgerInside = getInputElement('.hamburger-inside');
+    const backImage = getInputElement('.header__nav-image');
+    const nav = getInputElement('.header__nav');
+    const navLinks = document.querySelectorAll('.header__nav-link');
+    const navBackground = getInputElement('.header__nav-background');
 
-    backImage.addEventListener('click', (event) => {
-        event.stopPropagation();
-        closeMenu();
-    });
+    handleMenu(hamburgerOutside, openMenu);
+    handleMenu(hamburgerInside, closeMenu);
+    handleMenu(backImage, closeMenu);
 
-    atalho1.addEventListener('click', (event) => {
-        event.stopPropagation();
-        closeMenu();
-    });
+    // Fecha o menu após clicar em algum atalho
+    navLinks.forEach(link => handleMenu(link, closeMenu));
 
-    atalho2.addEventListener('click', (event) => {
-        event.stopPropagation();
-        closeMenu();
-    });
-
-    atalho3.addEventListener('click', (event) => {
-        event.stopPropagation();
-        closeMenu();
-    });
-
-    atalho4.addEventListener('click', (event) => {
-        event.stopPropagation();
-        closeMenu();
-    });
-
+    // Fecha o menu ao clicar na área de fundo
     document.addEventListener('click', (event) => {
-        if (!nav.contains(event.target) && 
-            !hamburgerOutside.contains(event.target) && 
-            !hamburgerInside.contains(event.target)) {
+        if (navBackground.contains(event.target)) {
             closeMenu();
         }
     });
