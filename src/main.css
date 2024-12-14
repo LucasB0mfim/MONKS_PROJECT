@@ -317,7 +317,7 @@ section, footer {
     }
 }
 
-.cards {
+.projects {
     padding-top: 5vw;
 
     @media(max-width: 768px) {
@@ -326,7 +326,7 @@ section, footer {
     }
 }
 
-.cards__title {
+.projects__title {
     color: #2D2D2D;
     font-size: 2.083vw;
 
@@ -335,7 +335,7 @@ section, footer {
     }
 }
 
-.cards__description {
+.projects__description {
     color: #2D2D2D;
     font-size: 1.4vw;
     margin-top: 0.417vw;
@@ -348,7 +348,7 @@ section, footer {
     }
 }
 
-.cards__container {
+.projects__container {
     display: flex;
     justify-content: space-between;
 
@@ -358,7 +358,7 @@ section, footer {
     }
 }
 
-.cards__container .card__list {
+.projects__container .project__list {
     width: 17vw;
     height: auto;
     padding: 0.3vw;
@@ -377,15 +377,15 @@ section, footer {
     }
 }
 
-.cards__container .card__list:last-child {
+.projects__container .project__list:last-child {
     margin: 0;
 }
 
-.cards__container .card__list:hover {
+.projects__container .project__list:hover {
     transform: scale(1.05);
 }
 
-.cards__container .card__list .card__title {
+.projects__container .project__list .project__title {
     margin: 1vw 2vw 1vw 0.5vw;
     font-size: 1.25vw;
     word-wrap: break-word;
@@ -396,7 +396,7 @@ section, footer {
     }
 }
 
-.cards__container .card__list .card__description {
+.projects__container .project__list .project__description {
     margin: 0.5vw 2vw 1vw 0.5vw;
     font-size: 1.13vw;
     word-wrap: break-word;
@@ -407,7 +407,7 @@ section, footer {
     }
 }
 
-.cards__container .card__image {
+.projects__container .project__image {
     width: 100%;
     height: 10vw;
     border-radius: 0.417vw;
@@ -422,7 +422,7 @@ section, footer {
     }
 }
 
-.cards__container .card__image img {
+.projects__container .project__image img {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -431,11 +431,11 @@ section, footer {
     transition: transform 0.3s ease;
 }
 
-.cards__container .card:hover .card__image img {
+.projects__container .project__list:hover .project__image img {
     transform: scale(1.05);
 }
 
-.photos {
+.essence {
     width: 100%;
     height: 50vw;
     padding-top: 5vw;
@@ -450,7 +450,7 @@ section, footer {
     }
 }
 
-.photos__main {
+.essence__main {
     width: 46.5%;
 
     @media (max-width: 768px) {
@@ -458,7 +458,7 @@ section, footer {
     }
 }
 
-.photos__title {
+.essence__title {
     color: #2D2D2D;
     font-size: 2.083vw;
 
@@ -469,7 +469,7 @@ section, footer {
     }
 }
 
-.photos__description {
+.essence__description {
     color: #2D2D2D;
     font-size: 1.4vw;
     margin-top: 0.417vw;
@@ -482,22 +482,22 @@ section, footer {
     }
 }
 
-.photos__photo {
+.essence__photo {
     width: 100%;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.photos__photo:hover {
+.essence__photo:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
 
-.photos__photo img {
+.essence__photo img {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.photos__photo-main {
+.essence__photo-main {
     height: 83.6%;
 
     @media(max-width: 768px) {
@@ -506,7 +506,7 @@ section, footer {
     }
 }
 
-.photos__aside {
+.essence__aside {
     width: 46.5%;
     display: flex;
     flex-direction: column;
@@ -517,11 +517,11 @@ section, footer {
     }
 }
 
-.photos__aside .photos__photo {
+.essence__aside .essence__photo {
     height: 43.8%;
 }
 
-.photos__aside .photos__photo:first-child {
+.essence__aside .essence__photo:first-child {
     @media(max-width: 768px) {
         margin-bottom: 2vh;
     }
@@ -610,7 +610,7 @@ section, footer {
     margin-bottom: 0.3vw;
 }
 
-.product {
+.services {
     padding-top: 5vw;
 
     @media(max-width: 768px) {
@@ -619,7 +619,7 @@ section, footer {
     }
 }
 
-.product__title {
+.services__title {
     color: #2D2D2D;
     font-size: 2.083vw;
     margin-bottom: 2.083vw;
@@ -630,7 +630,7 @@ section, footer {
     }
 }
 
-.product__container {
+.services__container {
     display: flex;
     justify-content: space-evenly;
     gap: 1vw;
@@ -641,7 +641,7 @@ section, footer {
     }
 }
 
-.product__card {
+.service__card {
     color: #7D26C9;
     font-weight: 600;
     font-size: 1.042vw;
@@ -660,12 +660,12 @@ section, footer {
     }
 }
 
-.product__card:hover {
+.service__card:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
 
-.plan {
+.plans {
     padding-top: 5vw;
 
     @media(max-width: 768px) {
@@ -674,7 +674,7 @@ section, footer {
     }
 }
 
-.plan__container {
+.plans__container {
     display: flex;
     justify-content: space-between;
 

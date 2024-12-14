@@ -1,48 +1,39 @@
 // Importando os dados simulados da 'api' mockada
-import { cities, products, plans } from './api/api.js';
-
-// Função para criar a div
-function createElement(container, className, content) {
-    const div = document.createElement('div');
-    div.className = className;
-    div.innerHTML = content;
-    container.appendChild(div);
-}
-
-// Criando cards
-cities.forEach(city => {
-    const content = `
-        <div class="card__image"><img src="${city.image}" alt="${city.title}"></div>
-        <h3 class="card__title">${city.title}</h3>
-        <p class="card__description">${city.description}</p>
-    `;
-    createElement(cardsContainer, 'card__list', content);
-});
-
-// Criando produtos
-products.forEach(product => {
-    const content = `<div class="product__card">${product.text}</div>`;
-    createElement(productsContainer, 'product__list', content);
-});
-
-// Criando planos
-plans.forEach(plan => {
-    const content = `
-        <div class="plan__card">
-            <h2 class="plan__card-title">${plan.title}</h2>
-            <p class="plan__card-description">${plan.phase}</p>
-            <button class="plan__card-button">Ver Detalhes</button>
-        </div>
-    `;
-    createElement(plansContainer, 'plan__list', content);
-});
+import { projects, services, plans } from './api/api.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+    const projectsContainer = getInputElement('.projects__container');
+    const servicesContainer = getInputElement('.services__container');
+    const plansContainer = getInputElement('.plans__container');
+    
+    const hamburgerOutside = getInputElement('.header__start-top .hamburger');
+    const hamburgerInside = getInputElement('.hamburger-inside');
+    const backImage = getInputElement('.header__nav-image');
+    const nav = getInputElement('.header__nav');
+    const navBackground = getInputElement('.header__nav-background');
+    const navLinks = document.querySelectorAll('.header__nav-link');
+    
     // Função para selecionar elementos com base na classe
     function getInputElement(className) {
         return document.querySelector(`${className}`);
     }
 
+    // Função para adicionar eventos de clique
+    function handleMenu(tag, action) {
+        tag.addEventListener('click', (event) => {
+            event.stopPropagation();
+            action();
+        });
+    }
+    
+    // Função para criar a div
+    function createElement(container, className, content) {
+        const div = document.createElement('div');
+        div.className = className;
+        div.innerHTML = content;
+        container.appendChild(div);
+    }
+    
     // Função para gerar números aleatórios
     function generateRandomNumber() {
         return Math.floor(Math.random() * 1000);
@@ -64,9 +55,36 @@ document.addEventListener('DOMContentLoaded', () => {
         setInputValue(inputNumber, [firstNumber, lastNumber]);
     }
 
+    // Criando cards
+    projects.forEach(project => {
+        const content = `
+            <div class="project__image"><img src="${project.image}" alt="${project.title}"></div>
+            <h3 class="project__title">${project.title}</h3>
+            <p class="project__description">${project.description}</p>
+        `;
+        createElement(projectsContainer, 'project__list', content);
+    });
+    
+    // Criando produtos
+    services.forEach(service => {
+        const content = `<div class="service__card">${service.text}</div>`;
+        createElement(servicesContainer, 'service__list', content);
+    });
+    
+    // Criando planos
+    plans.forEach(plan => {
+        const content = `
+            <div class="plan__card">
+                <h2 class="plan__card-title">${plan.title}</h2>
+                <p class="plan__card-description">${plan.phase}</p>
+                <button class="plan__card-button">Ver Detalhes</button>
+            </div>
+        `;
+        createElement(plansContainer, 'plan__list', content);
+    });
+
     generatedNumbers();
 
-    // A partir daqui começam os scripts para gerenciar o menu hamburguer...
     const openMenu = () => {
         nav.classList.add('active');
     };
@@ -74,21 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeMenu = () => {
         nav.classList.remove('active');
     };
-
-    // Função para adicionar eventos de clique
-    function handleMenu(tag, action) {
-        tag.addEventListener('click', (event) => {
-            event.stopPropagation();
-            action();
-        });
-    }
-
-    const hamburgerOutside = getInputElement('.header__start-top .hamburger');
-    const hamburgerInside = getInputElement('.hamburger-inside');
-    const backImage = getInputElement('.header__nav-image');
-    const nav = getInputElement('.header__nav');
-    const navLinks = document.querySelectorAll('.header__nav-link');
-    const navBackground = getInputElement('.header__nav-background');
 
     handleMenu(hamburgerOutside, openMenu);
     handleMenu(hamburgerInside, closeMenu);

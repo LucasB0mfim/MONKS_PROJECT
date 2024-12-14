@@ -1,4 +1,4 @@
-export const cities = [
+export const projects = [
     {
         id: 1,
         image: 'https://github.com/LucasB0mfim/MONKS_IMAGES/blob/main/images/city_1.png?raw=true',
@@ -25,25 +25,7 @@ export const cities = [
     }
 ];
 
-export const plans = [
-    {
-        id: 0,
-        title: 'Essencial para Começar',
-        phase: 'Este plano é ideal para quem está iniciando um projeto pequeno ou de baixo custo. Oferece os serviços essenciais para garantir que sua obra comece com o pé direito, com acompanhamento básico e suporte técnico eficiente.',
-    },
-    {
-        id: 1,
-        title: 'Mais Recursos e Flexibilidade',
-        phase: 'Perfeito para projetos de médio porte, esse plano oferece uma gama maior de serviços, incluindo personalização do projeto e mais flexibilidade nas soluções. Com um suporte dedicado e maior acompanhamento, garantimos que cada detalhe do seu projeto seja atendido com excelência.',
-    },
-    {
-        id: 2,
-        title: 'Soluções Completas',
-        phase: 'O plano mais completo, ideal para grandes empreendimentos. Além de todos os serviços inclusos, oferece atendimento exclusivo, planejamento detalhado e a possibilidade de soluções integradas para cada fase da obra. Aqui, você terá total suporte e recursos para transformar seu projeto em realidade de forma impecável.',
-    },
-];
-
-export const products = [
+export const services = [
     {
         id: 0,
         text: 'Construção de Prédios',
@@ -103,5 +85,23 @@ export const products = [
     {
         id: 14,
         text: 'Construção Modular',
+    },
+];
+
+export const plans = [
+    {
+        id: 0,
+        title: 'Essencial para Começar',
+        phase: 'Este plano é ideal para quem está iniciando um projeto pequeno ou de baixo custo. Oferece os serviços essenciais para garantir que sua obra comece com o pé direito, com acompanhamento básico e suporte técnico eficiente.',
+    },
+    {
+        id: 1,
+        title: 'Mais Recursos e Flexibilidade',
+        phase: 'Perfeito para projetos de médio porte, esse plano oferece uma gama maior de serviços, incluindo personalização do projeto e mais flexibilidade nas soluções. Com um suporte dedicado e maior acompanhamento, garantimos que cada detalhe do seu projeto seja atendido com excelência.',
+    },
+    {
+        id: 2,
+        title: 'Soluções Completas',
+        phase: 'O plano mais completo, ideal para grandes empreendimentos. Além de todos os serviços inclusos, oferece atendimento exclusivo, planejamento detalhado e a possibilidade de soluções integradas para cada fase da obra. Aqui, você terá total suporte e recursos para transformar seu projeto em realidade de forma impecável.',
     },
 ];
