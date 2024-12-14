@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'HelveticaNeueLight';
-    src: url('./assets/fonts/HelveticaNeueLight.otf') format('opentype');
+    src: url('https://raw.githubusercontent.com/LucasB0mfim/MONKS_IMAGES/main/fonts/HelveticaNeueLight.otf') format('opentype');
     font-weight: lighter;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'HelveticaNeueBold';
-    src: url('./assets/fonts/HelveticaNeueBold.otf') format('opentype');
+    src: url('https://raw.githubusercontent.com/LucasB0mfim/MONKS_IMAGES/main/fonts/HelveticaNeueBold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
 }

@@ -1,4 +1,4 @@
-import { cities, products, plans } from './api.js';
+import { cities, products, plans } from './api/api.js';
 
 const cardsContainer = document.querySelector('.cards__container');
 const productsContainer = document.querySelector('.product__container');
@@ -6,6 +6,7 @@ const plansContainer = document.querySelector('.plan__container');
 
 cities.forEach(city => {
     const card = document.createElement('div');
+
     card.className = 'card__list';
     card.innerHTML = `
         <div class="card__image"><img src="${city.image}" alt="${city.title}"></div>
@@ -17,6 +18,7 @@ cities.forEach(city => {
 
 products.forEach(product => {
     const productDiv = document.createElement('div');
+
     productDiv.className = 'product__list';
     productDiv.innerHTML = `<div class="product__card">${product.text}</div>`;
     productsContainer.appendChild(productDiv);
@@ -24,6 +26,7 @@ products.forEach(product => {
 
 plans.forEach(plan => {
     const planDiv = document.createElement('div');
+    
     planDiv.className = 'plan__list';
     planDiv.innerHTML = `
         <div class="plan__card">

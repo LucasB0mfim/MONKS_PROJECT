@@ -1,25 +1,25 @@
 export const cities = [
     {
         id: 1,
-        image: './assets/images/city_1.png',
+        image: 'https://github.com/LucasB0mfim/MONKS_IMAGES/blob/main/images/city_1.png?raw=true',
         title: 'Cidades Sustentáveis',
         description: 'Projetos que integram engenharia e sustentabilidade, criando espaços urbanos harmônicos com o meio ambiente.'
     },
     {
         id: 2,
-        image: './assets/images/city_2.png',
+        image: 'https://github.com/LucasB0mfim/MONKS_IMAGES/blob/main/images/city_2.png?raw=true',
         title: 'Pontes Inovadoras',
         description: 'Conectamos lugares e pessoas com pontes que combinam design arrojado e tecnologia de ponta.'
     },
     {
         id: 3,
-        image: './assets/images/city_3.png',
+        image: 'https://github.com/LucasB0mfim/MONKS_IMAGES/blob/main/images/city_3.png?raw=true',
         title: 'Resgate de Patrimônios',
         description: 'Reformas e construções que respeitam a história e a arquitetura original de edifícios icônicos.'
     },
     {
         id: 4,
-        image: './assets/images/city_4.png',
+        image: 'https://github.com/LucasB0mfim/MONKS_IMAGES/blob/main/images/city_4.png?raw=true',
         title: 'Infraestruturas Monumentais',
         description: 'Desenvolvemos grandes obras que integram cidades e impulsionam o desenvolvimento urbano.'
     }
