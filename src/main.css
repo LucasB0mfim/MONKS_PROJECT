@@ -118,7 +118,7 @@ body {
     margin-right: 0.3vw;
 
     @media(max-width: 768px) {
-        font-size: 4vh;
+        font-size: 2vh;
         margin-right: 0.3vh;
         visibility: visible;
         color: #2D2D2D;
@@ -260,7 +260,7 @@ body {
     font-weight: lighter;
 
     @media (max-width: 768px) {
-        font-size: 1.5vh;
+        font-size: 1.8vh;
         margin-bottom: 1.8vh;
     }
 }
@@ -274,7 +274,6 @@ body {
     @media (max-width: 768px) {
         height: auto;
         margin-top: 2vh;
-        margin-bottom: 2vh;
     }
 }
 
@@ -727,6 +726,8 @@ section, footer {
 
     @media (max-width: 768px) {
         font-size: 2vh;
+        margin-top: 1vh;
+        margin-bottom: 2vh;
     }
 }
 
@@ -1069,6 +1070,7 @@ footer {
     padding-bottom: 1.5vw;
 
     @media (max-width: 768px) {
+        text-align: center;
         font-size: 2.2vh;
         padding-bottom: 2vh;
     }

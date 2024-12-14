@@ -57,31 +57,57 @@ document.addEventListener('DOMContentLoaded', () => {
     generateRandomNumbers();
 
     function validate(event) {
-        event.preventDefault();
+        const requiredInputs = document.querySelectorAll('.validate__input--required');
+        let allRequiredFilled = true;
+
+        requiredInputs.forEach(input => {
+            if (!input.value) {
+                allRequiredFilled = false;
+            }
+        });
+
+        if (!allRequiredFilled) {
+            alert('Por favor, preencha todos os campos obrigatórios.');
+            return;
+        }
 
         const userResult = Number(mathResultInput.value);
         const correctResult = firstNumber + secondNumber;
 
-        if (userResult === correctResult) {
-            alert('Parabéns! Resultado correto.');
-            generateRandomNumbers();
-        } else {
+        if (userResult !== correctResult) {
             alert('Ops! Resultado incorreto. Tente novamente.');
+            generateRandomNumbers();
+
+            const nameInput = document.querySelector('input[type="text"][placeholder="Nome Completo*"]');
+            const emailInput = document.querySelector('input[type="email"][placeholder="Email*"]');
+            nameInput.value = '';
+            emailInput.value = '';
+
+            return;
         }
+
+        alert('Parabéns! Formulário enviado com sucesso.');
+        securityForm.submit();
     }
 
     securityForm.addEventListener('submit', (event) => {
         event.preventDefault();
+        validate(event);
     });
 
     validateButton.addEventListener('click', validate);
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const hamburgerOutside = document.querySelector('.header__start-top .hamburger');
     const hamburgerInside = document.querySelector('.hamburger-inside');
     const backImage = document.querySelector('.header__nav-image');
     const nav = document.querySelector('.header__nav');
+    const atalho1 = document.getElementById('atalho1');
+    const atalho2 = document.getElementById('atalho2');
+    const atalho3 = document.getElementById('atalho3');
+    const atalho4 = document.getElementById('atalho4');
 
     const closeMenu = () => {
         nav.classList.remove('active');
@@ -98,6 +124,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     backImage.addEventListener('click', (event) => {
+        event.stopPropagation();
+        closeMenu();
+    });
+
+    atalho1.addEventListener('click', (event) => {
+        event.stopPropagation();
+        closeMenu();
+    });
+
+    atalho2.addEventListener('click', (event) => {
+        event.stopPropagation();
+        closeMenu();
+    });
+
+    atalho3.addEventListener('click', (event) => {
+        event.stopPropagation();
+        closeMenu();
+    });
+
+    atalho4.addEventListener('click', (event) => {
         event.stopPropagation();
         closeMenu();
     });
