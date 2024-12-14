@@ -1,5 +1,5 @@
 // Importando os dados simulados da 'api' mockada
-import { projects, services, plans } from '../src/api/api.js';
+import { projects, services, plans } from './api/api.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const hamburgerOutside = getInputElement('.header__start-top .hamburger');
