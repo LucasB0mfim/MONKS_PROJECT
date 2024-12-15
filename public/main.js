@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateAOSValue() {
         const screenWidth = window.innerWidth;
         const setValues = [
-            { className: 'projects__container', desktop: 500, mobile: 500 },
-            { className: 'essence', desktop: 1100, mobile: 500 },
-            { className: 'download', desktop: 1100, mobile: 500 },
-            { className: 'services', desktop: 1100, mobile: 500 },
-            { className: 'plans', desktop: 1200, mobile: 500 },
+            { className: 'projects__container', desktop: 500, mobile: 300 },
+            { className: 'essence', desktop: 1100, mobile: 400 },
+            { className: 'download', desktop: 1100, mobile: 400 },
+            { className: 'services', desktop: 1100, mobile: 400 },
+            { className: 'plans', desktop: 1200, mobile: 400 },
         ];
 
         setValues.forEach(config => {
