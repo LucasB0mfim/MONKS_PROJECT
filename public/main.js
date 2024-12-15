@@ -18,6 +18,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const responseForm = getInputElement('.validate__math-result');
     const inputRequired = document.querySelectorAll('.validate__input');
     
+    // Função para gerenciar o valor do data-aos
+    function updateAOSValue() {
+        const screenWidth = window.innerWidth;
+        const setValues = [
+            { className: 'projects__container', desktop: 500, mobile: 300 },
+            { className: 'essence', desktop: 1100, mobile: 1500 },
+            { className: 'download', desktop: 1100, mobile: 2100 },
+            { className: 'services', desktop: 1100, mobile: 2200 },
+            { className: 'plans', desktop: 1200, mobile: 2400 },
+        ];
+
+        setValues.forEach(config => {
+            const sections = document.querySelectorAll(`.${config.className}`);
+            sections.forEach(section => {
+                const offsetValue = screenWidth > 1024 ? config.desktop : config.mobile;
+                section.setAttribute('data-aos-offset', offsetValue);
+            });
+        });
+
+        AOS.refresh();
+    };
+
+    updateAOSValue();
+    AOS.init();
+    AOS.refresh();
+    window.addEventListener('resize', updateAOSValue);
+
     // Função para selecionar elementos com base na classe
     function getInputElement(className) {
         return document.querySelector(`${className}`);

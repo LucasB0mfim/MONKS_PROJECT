@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="imagex/png" href="./favicon.svg">
+    <link rel="shortcut icon" type="image/png" href="./favicon.svg">
     <title>Monks - Soluções Inteligentes</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./main.css">
 </head>
 
@@ -86,61 +87,58 @@
         </aside>
     </header>
 
-    <!-- Main Content Sections -->
-    <main>
-        <!-- Projects Section -->
-        <section class="projects" id="projects">
-            <h2 class="projects__title">O que construímos para o futuro</h2>
-            <p class="projects__description">Nossas obras são mais do que estruturas; são marcos que conectam pessoas, histórias e cidades.</p>
-            <div class="projects__container">
-                <!-- Dynamically injected -->
-            </div>
-        </section>
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2 class="projects__title">O que construímos para o futuro</h2>
+        <p class="projects__description">Nossas obras são mais do que estruturas; são marcos que conectam pessoas, histórias e cidades.</p>
+        <div class="projects__container" data-aos="fade-left" data-aos-duration="500">
+            <!-- Dynamically injected -->
+        </div>
+    </section>
 
-        <!-- Essence Section -->
-        <section class="essence" id="essence">
-            <main class="essence__main">
-                <div>
-                    <h2 class="essence__title">Transformando Paisagens Urbanas</h2>
-                    <p class="essence__description">Cada cidade tem sua essência. Nós a moldamos com construções que respeitam sua identidade e impulsionam seu futuro.</p>
-                </div>
-                <img class="essence__photo essence__photo-main" src="https://github.com/LucasB0mfim/MONKS_IMAGES/blob/main/images/city_5.png?raw=true" alt="Front photo of a city">
-            </main>
-            <aside class="essence__aside">
-                <img class="essence__photo" src="https://github.com/LucasB0mfim/MONKS_IMAGES/blob/main/images/city_6.png?raw=true" alt="Front photo of a city">
-                <img class="essence__photo" src="https://github.com/LucasB0mfim/MONKS_IMAGES/blob/main/images/city_7.png?raw=true" alt="Front photo of a city">
-            </aside>
-        </section>
-
-        <!-- Download Section -->
-        <section class="download">
-            <div class="download__container">
-                <div class="download__text">
-                    <h2 class="download__title">Descubra mais em nosso app</h2>
-                    <p class="download__description">Baixe nosso aplicativo e acompanhe nossos projetos, serviços e novidades onde você estiver.</p>
-                </div>
-                <div class="download__apps">
-                    <img class="download__app" src="https://github.com/LucasB0mfim/MONKS_IMAGES/blob/main/images/appStore.png?raw=true" alt="App Store">
-                    <img class="download__app" src="https://github.com/LucasB0mfim/MONKS_IMAGES/blob/main/images/playStore.png?raw=true" alt="Play Store">
-                </div>
+    <!-- Essence Section -->
+    <section class="essence" id="essence" data-aos="fade-right" data-aos-duration="500">
+        <main class="essence__main">
+            <div>
+                <h2 class="essence__title">Transformando Paisagens Urbanas</h2>
+                <p class="essence__description">Cada cidade tem sua essência. Nós a moldamos com construções que respeitam sua identidade e impulsionam seu futuro.</p>
             </div>
-        </section>
+            <img class="essence__photo essence__photo-main" src="https://github.com/LucasB0mfim/MONKS_IMAGES/blob/main/images/city_5.png?raw=true" alt="Front photo of a city">
+        </main>
+        <aside class="essence__aside">
+            <img class="essence__photo" src="https://github.com/LucasB0mfim/MONKS_IMAGES/blob/main/images/city_6.png?raw=true" alt="Front photo of a city">
+            <img class="essence__photo" src="https://github.com/LucasB0mfim/MONKS_IMAGES/blob/main/images/city_7.png?raw=true" alt="Front photo of a city">
+        </aside>
+    </section>
 
-        <!-- Services Section -->
-        <section class="services" id="services">
-            <h2 class="services__title">Tudo o que fazemos por você</h2>
-            <div class="services__container">
-                <!-- Dynamically injected -->
+    <!-- Download Section -->
+    <section class="download" data-aos="fade-left" data-aos-duration="500">
+        <div class="download__container">
+            <div class="download__text">
+                <h2 class="download__title">Descubra mais em nosso app</h2>
+                <p class="download__description">Baixe nosso aplicativo e acompanhe nossos projetos, serviços e novidades onde você estiver.</p>
             </div>
-        </section>
+            <div class="download__apps">
+                <img class="download__app" src="https://github.com/LucasB0mfim/MONKS_IMAGES/blob/main/images/appStore.png?raw=true" alt="App Store">
+                <img class="download__app" src="https://github.com/LucasB0mfim/MONKS_IMAGES/blob/main/images/playStore.png?raw=true" alt="Play Store">
+            </div>
+        </div>
+    </section>
 
-        <!-- Plan Section -->
-        <section class="plans" id="plans">
-            <div class="plans__container">
-                <!-- Dynamically injected -->
-            </div>
-        </section>
-    </main>
+    <!-- Services Section -->
+    <section class="services" id="services" data-aos="fade-right" data-aos-duration="500">
+        <h2 class="services__title">Tudo o que fazemos por você</h2>
+        <div class="services__container">
+            <!-- Dynamically injected -->
+        </div>
+    </section>
+
+    <!-- Plan Section -->
+    <section class="plans" id="plans" data-aos="fade-left" data-aos-duration="500">
+        <div class="plans__container">
+            <!-- Dynamically injected -->
+        </div>
+    </section>
 
     <!-- Footer Section -->
     <footer>
@@ -183,6 +181,7 @@
             </div>
         </div>
 
+        <!-- dividing line -->
         <div class="row"></div>
 
         <!-- Social Media Links -->
@@ -207,6 +206,6 @@
 
     <!-- External JS -->
     <script type="module" src="./main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
-
 </html>
