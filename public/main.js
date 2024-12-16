@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const screenWidth = window.innerWidth;
         const setValues = [
             { className: 'projects__container', desktop: 500, mobile: 300 },
-            { className: 'essence', desktop: 1100, mobile: 300 },
-            { className: 'download', desktop: 1100, mobile: 300 },
-            { className: 'services', desktop: 1100, mobile: 300 },
-            { className: 'plans', desktop: 1200, mobile: 300 },
+            { className: 'essence', desktop: 800, mobile: 300 },
+            { className: 'download', desktop: 800, mobile: 300 },
+            { className: 'services', desktop: 800, mobile: 300 },
+            { className: 'plans', desktop: 900, mobile: 300 },
         ];
 
         setValues.forEach(config => {
